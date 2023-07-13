@@ -2,9 +2,9 @@
 
 App is base on FAST API, uvicorn server and TinyDB
 
-FAST API
+1] FAST API Rutine
   Run server:
-  uvicorn githubApiRutine:app --reload
+    uvicorn githubApiRutine:app
   app doc url:  http://127.0.0.1:8000/docs
 
 App contains a three APIs repo, stat, list_repo
@@ -33,3 +33,11 @@ API list_repo - calculate most often repository names (based on count of pull re
   Will count all pull requests in each repository in database and generate a list of repository names with most counts of pull  
   requests
 
+2] FAST API Chart Rutine
+  Run server:
+    uvicorn githubApiChartRutine:app
+  app doc url:  http://127.0.0.1:8000/docs
+
+App contains one root API
+
+root API ('/') - shows simple html with pre-generated image witch github satatistic chart. Image pre-generation is done during startup.
