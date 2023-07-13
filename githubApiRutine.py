@@ -36,7 +36,7 @@ app = FastAPI()
 @app.post("/repo/")
 async def create_item(repo: Repo):
     '''
-    Page repo calculate average time between pull requests
+    Api repo calculate average time between pull requests
     Input: repository name or strig "default"
     Output: dictionary consist of result and intermediate result
     '''
@@ -75,7 +75,7 @@ async def create_item(repo: Repo):
 @app.post("/stat/")
 async def create_item(stat: Stat):
     '''
-    Page stat calculate counts of all event types in defined time offset
+    Api stat calculate counts of all event types in defined time offset
     Input: time offest
     Output: dictionary consist of result and intermediate result
     '''
@@ -110,7 +110,7 @@ async def create_item(stat: Stat):
 @app.post("/list_repo/")
 async def create_item():
     '''
-    Page list_repo calculate most often repository names (based on count of pull request)
+    Api list_repo calculate most often repository names (based on count of pull request)
     Input: none
     Output: list of repository names
     '''
